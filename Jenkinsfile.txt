@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('version') {
             steps {
-                    sh 'robot -d C:\Users\robot\PycharmProjects\test-robot\RESULTS\ C:\Users\robot\PycharmProjects\test-robot\TESTS\SSH\ssh-login.robot'
+                    sh 'robot -d result .\test-robot\TESTS\ssh-login.robot'
             }
         }
     }
