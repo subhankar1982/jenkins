@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage('version') {
+            steps {
+                sh 'pip --version'
+            }
+        }
+    }
+	stages {
+        stage('SSHLogin') {
+            steps {
+                sh 'python ssh-login.robot'
+            }
+        }
+    }
+}
